@@ -37,7 +37,7 @@ const Signup = () => {
         />
       </div>
       <div style={{ marginTop: "20px" }}>
-        <Button className="btn btn-dark" text="Login" />
+        <Button className="btn btn-dark" text="Sign Up" />
       </div>
     </div>
   );

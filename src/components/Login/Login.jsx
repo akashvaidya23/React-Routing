@@ -13,7 +13,7 @@ const Login = () => {
       }}
     >
       <div>
-        <h3>Login Form</h3>
+        <h4>Login Form</h4>
       </div>
       <div style={{ marginTop: "20px" }}>
         <Input

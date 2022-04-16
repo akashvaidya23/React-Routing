@@ -1,38 +1,36 @@
 import { Link } from "react-router-dom";
+import { Layout, Menu, Breadcrumb } from "antd";
+const { Header, Content, Footer } = Layout;
+
 const Navbar = () => {
+  const menuItems = [
+    {
+      title: "FLIPKART",
+      link: "/",
+    },
+    {
+      title: "Login",
+      link: "/login",
+    },
+    {
+      title: "Sign Up",
+      link: "/signup",
+    },
+  ];
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link class="nav-link active" aria-current="page" to="/login">
-                Login
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/signup">
-                Sign Up
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
+      {menuItems.map((ele, index) => {
+        return (
+          <Menu.Item key={index}>
+            {" "}
+            <Link class="nav-link active" aria-current="page" to={ele.link}>
+              {ele.title}
+            </Link>
+          </Menu.Item>
+        );
+      })}
+    </Menu>
   );
 };
 
