@@ -1,0 +1,11 @@
+.inputname {
+  width: 400px;
+  margin-top: 20px;
+}
+
+.main {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
